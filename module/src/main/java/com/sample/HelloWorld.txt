@@ -1,0 +1,13 @@
+package com.sample;
+
+import org.slf4j.*;
+
+public class HelloWorld
+{
+    private static final Logger LOGGER = LoggerFactory.getLogger(HelloWorld.class);
+
+    public static void hello()
+    {
+        LOGGER.info("Hello");
+    }
+}

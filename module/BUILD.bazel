@@ -1,0 +1,34 @@
+genrule(
+    name = "generated-source",
+    srcs = ["src/main/java/com/sample/HelloWorld.txt"],
+    outs = ["src/main/java/com/sample/HelloWorld.java"],
+    cmd = "cp $< $@"
+)
+
+java_library(
+    name = "generated-lib",
+    srcs = [ ":generated-source" ],
+    deps = [
+        "@org_slf4j_slf4j_api//jar",
+    ]
+)
+
+java_library(
+    name = "sample-lib",
+    srcs = [ "src/main/java/com/sample/SampleMain.java" ],
+    resources = [ "src/main/resources/logback.xml" ],
+    deps = [
+        "@org_slf4j_slf4j_api//jar",
+        ":generated-lib",
+    ],
+)
+
+java_binary(
+    name = "sample-bin",
+    main_class = "com.sample.SampleMain",
+    runtime_deps = [
+        ":sample-lib",
+        "@ch_qos_logback_logback_classic//jar",
+        "@ch_qos_logback_logback_core//jar",
+    ],
+)
