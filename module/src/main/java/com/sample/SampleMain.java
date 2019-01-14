@@ -9,6 +9,5 @@ public class SampleMain
     public static void main(String[] anArguments)
     {
         LOGGER.info("Started");
-        HelloWorld.hello();
     }
 }
