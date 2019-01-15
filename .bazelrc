@@ -1,4 +1,3 @@
-build --host_javabase=@local_jdk//:jdk
-build --java_toolchain=@bazel_tools//tools/jdk:toolchain_vanilla
-build --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_vanilla
+build --java_toolchain=@bazel_tools//tools/jdk:toolchain_hostjdk8
+build --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_hostjdk8
 build --javacopt=-XepDisableAllChecks
