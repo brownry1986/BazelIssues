@@ -4,6 +4,7 @@ java_library(
     resources = [ "src/main/resources/logback.xml" ],
     deps = [
         "@org_slf4j_slf4j_api//jar",
+        "@com_google_guava_guava//jar",
     ],
 )
 

@@ -14,3 +14,8 @@ maven_jar(
     name = "ch_qos_logback_logback_core",
     artifact = "ch.qos.logback:logback-core:1.1.3",
 )
+
+maven_jar(
+    name = "com_google_guava_guava",
+    artifact = "com.google.guava:guava:27.0.1-jre",
+)
