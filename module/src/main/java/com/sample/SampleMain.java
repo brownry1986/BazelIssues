@@ -1,11 +1,12 @@
 package com.sample;
 
 import com.google.common.collect.ImmutableMap;
+import org.joda.time.format.DateTimeFormat;
 import org.slf4j.*;
 
 import java.util.List;
 import com.google.common.collect.Lists;
-
+import org.joda.time.format.DateTimeFormatter;
 public class SampleMain
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(SampleMain.class);
@@ -29,6 +30,8 @@ public class SampleMain
         for (String message : messageMap.values()) {
             messages.add(message);
         }
+
+        DateTimeFormatter formatter = DateTimeFormat.fullDate();
         return messages;
     }
 }

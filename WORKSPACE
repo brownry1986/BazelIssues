@@ -19,3 +19,8 @@ maven_jar(
     name = "com_google_guava_guava",
     artifact = "com.google.guava:guava:27.0.1-jre",
 )
+
+maven_jar(
+    name = "joda_time_joda_time",
+    artifact = "joda-time:joda-time:2.7"
+)
